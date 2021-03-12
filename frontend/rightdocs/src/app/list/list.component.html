@@ -1,0 +1,26 @@
+<h2>List of people</h2>
+<ul *ngFor = "let person of listOfPersons" >
+  <li>
+    {{person.name}}
+    <br>
+    <div *ngIf = "displayDetails" style= "width: 50%" >
+      <table style= "width: 100%">
+        <tr>
+          <th>ID</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Mobile</th>
+        </tr>
+        <tr>
+          <td>{{person._id}}</td>
+          <td>{{person.age}}</td>
+          <td>{{person.gender}}</td>
+          <td>{{person.mob}}</td>
+        </tr>
+
+      </table>
+    </div>
+  </li>
+</ul>
+<button class="button" type="button" name="details" (click) = "onClickDetails()">Details</button>
+<button class="button" type="button" name="refresh" (click) = "onClickRefresh()">Refresh</button>

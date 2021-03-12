@@ -1,0 +1,14 @@
+<!-- adding click event to edit button -->
+<button  class="button" type="button" name="delete" (click)="onClickDelete()">Delete a person</button>
+
+<!-- ngIf directive for conditional rendering -->
+<div class="edit-form" *ngIf ="displayForm">
+  <p>Enter person's Id you wish to delete</p>
+
+  <label for="id">Id:</label>
+  <input type="text" name="id" [(ngModel)] = "Id"><br>
+
+
+  <button class="button" type="button" name="cancel" (click) = "onClickDelete()">Cancel</button>
+  <button class="button" type="button" name="submit" (click) = "onClickSubmit()">Submit</button>
+</div>
